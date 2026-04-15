@@ -105,3 +105,21 @@ public final class Ordinateur {
         System.out.println(pc2);
         System.out.println(pc3);
     }
+
+    Question 1 (4 pts) : Expliquez pourquoi le Builder doit etre une classe imbriquee statique et non
+une classe interne membre. Quelles seraient les consequences si elle n'etait pas static ?
+
+Le Builder est static car il sert à créer l’objet Ordinateur sans dépendre d’un objet déjà existantalors si il n’était pas static dans ce cas
+ on devrait créer un Ordinateur avant utiliser le Builder ce qui n’a pas de sens 
+
+Question 2 (3 pts) : Qu'est-ce que le "telescoping constructor anti-pattern" ? Donnez un exemple
+Java (5+ parametres) qui illustre ce probleme.
+
+Le telescoping constructor est un constructeur avec trop de paramètres donc 
+difficile à lire et on peut facilement se tromper dans l’ordre le Builder rend plus propre 
+
+Question 3 (3 pts) : Citez 2 exemples de classes imbriquees statiques celebres dans l'API Java
+standard, et expliquez leur role.
+
+Map.Entry c'est représente une paire clé ou /et valeur dans une Map 
+AbstractMap.SimpleEntry c'st permet de stocker facilement une clé et une valeur

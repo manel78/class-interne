@@ -76,3 +76,21 @@ public class Robot {
 
         r.eteindre();
     }
+
+
+
+Question 1 (3 pts) : Pourquoi la classe interne Bras peut-elle acceder directement aux champs
+prives de Robot sans getter ? Quel mecanisme Java le permet ?
+
+la class bras peut acceder directement au attribut de robot car c'est une class interne, le mecanisme qui le permet est juste que 
+classe interne peut accéder aux attributs privés de sa classe externe
+
+
+Question 2 (2 pts) : Quelle est la syntaxe pour creer une instance de Bras depuis une autre
+classe que Robot ? Expliquez pourquoi cette syntaxe est differente d'une instanciation classique.
+
+Pour créer un Bras depuis une autre classe c'est ; 
+Robot r = new Robot("jock", 100);
+ Robot.Bras b = r.new Bras();
+  le robot avant le bras car le bras dépend du robot
+Question 3 (3 pts) : Si Bras avait aussi un ch
