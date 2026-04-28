@@ -202,3 +202,16 @@ new ClickListener() {
         System.out.println("Total depuis le debut : " + nbClics);
     }
 } */
+
+
+// BONUS  
+/*public void removeClickListener(ClickListener l) {
+    clickListeners.remove(l);
+}
+Le problème avec les lambdas c'est que java cree un nouvel objet a chaque fois qu on le mentionne donc deux pareil ne sont pas le meme object en memoire et remove ()) la solution est de de stocker lamba 
+// on stocke le lambda dans une variable
+ClickListener monClic = (x, y) -> System.out.println("Clic");
+// on ajoute la variable (pas le lambda directement)
+btn.addClickListener(monClic);
+// remove fonctionne car c'est le meme objet en memoire
+btn.removeClickListener(monClic);
