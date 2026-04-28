@@ -5,6 +5,7 @@ class Produit {
     String categorie;
     double prix;
     int quantite;
+    // 
 
     public Produit(String nom, String categorie, double prix, int quantite) {
         this.nom = nom;
@@ -74,3 +75,14 @@ public class GestionnaireStock {
         System.out.println(g.filtrerEtTrier("Informatique", 50.0, 10));
     }
 }
+
+
+// Q1 la classe java ne laisse pas ( p.categorie.equals(categorie) && p.prix <= prixMax && p.quantite >= quantiteMin;) se modifie pas car lors de la creation elle les enregistre et si ca cahnge elle aurais des valeurs bizarres/ ambigues.
+// Q2 public List<Produit> filtrerEtTrierStream(String categorie, double prixMax, int quantiteMin) {
+   //  return stock.stream()
+   //      .filter(p -> p.categorie.equals(categorie))
+   //      .filter(p -> p.prix <= prixMax)
+   //     .filter(p -> p.quantite >= quantiteMin)
+   //     .sorted(Comparator.comparingDouble(p -> p.prix))
+   //     .collect(java.util.stream.Collectors.toList());
+   // bcp plus cours et lisible pour la version stream 
