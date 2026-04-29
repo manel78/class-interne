@@ -1,0 +1,5 @@
+Java efface tout à l'exécution il garde pas les types génériques. Donc une Pile<Integer> et une Pile<String> pour Java c'est pareil au final les deux deviennent juste Object.
+Parce qu'à l'exécution T existe plus Java sait plus ce que c'est. Du coup il peut pas faire new T() vu qu'il sait pas si c'est un Integer un String ou autre chose.
+<T extends Number> on donne un nom au type donc on peut le réutiliser dans toute la méthode. <? extends Number> on donne pas de nom on dit juste que c'est un Number mais on peut pas s'en reservir après.
+On utilise extends quand on lit dans la liste et super quand on écrit dedans. Pour s'en souvenir y'a PECS : Producer Extends Consumer Super ce qui produit on met extends ce qui consomme on met super.
+Non T[] ca marche pas Java accepte pas. On utilise une List<T> a la place qui elle marche bien avec les génériques.
